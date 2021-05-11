@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+   <div class="features">
+       <h1>{{title}}</h1>
+       <br>
+       <p>Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.</p>
+       <a href="{% url 'about' %}"><button class="btn btn-warning">На страницу про нас</button></a>
+       <!-- {% for el in values %}
+            {% if el == 'Some' %}
+                {% filter upper %}
+                    <p>{{el}}</p>
+                {% endfilter %}
+            {% endif %}        
+       {% endfor %}
+
+       {% for el in obj %}
+            <p>{{el}}</p>
+       {% endfor %} -->
+   </div>
+{% endblock %}

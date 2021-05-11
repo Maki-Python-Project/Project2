@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Про нас
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Про нас</h1>
+    <br>
+    <p>Сайт создан в целях повышения навыков в создании сайтов на фреймворке Django</p>
+    <a href="{% url 'home' %}"><button class="btn btn-danger">На страницу Home</button></a>
+</div>
+{% endblock %}

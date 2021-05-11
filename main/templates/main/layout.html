@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+<body>
+    <aside>
+        <span class="logo">My Site</span>
+        <!-- <h3>Navigation</h3> -->
+        <!-- <h1>My Site</h1> -->
+        <!-- <br> -->
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</a></li>
+            <a href="{% url 'about' %}"><li><i class="fas fa-newspaper"></i> Про нас</a></li>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-paper-plane"></i> News</a></li>
+            <a href="{% url 'contacts' %}"><li><i class="fas fa-id-card"></i> Контакты</a></li>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus">Добавить новость</i></button></a></li>
+        </ul>
+    </aside>
+    <main>
+        {% block content  %}
+
+        {% endblock %}
+    </main>
+    
+</body>
+</html>
